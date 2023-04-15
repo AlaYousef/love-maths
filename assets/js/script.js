@@ -1,27 +1,25 @@
 document.addEventListener("DOMContentLoaded", function(){
-    alert("You clicked submit button");
+    let buttons = document.getElementsByTagName("button");
 
-let buttons = document.getElementsByTagName(button);
-
-for(let button of bottons){
-    button.addEventListener("click",function(){
-        for(let button of buttons){
-            if(this.getAttribute("data-type") === "submit"){
-                alert("You clicked submit button");
-
-            }else{
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") {
+                alert("You clicked Submit!");
+            } else {
                 let gameType = this.getAttribute("data-type");
-                alert( `You clicked $(gameType) `);
+                alert(`You clicked ${gameType}`);
             }
+        });
+    }
+});
 
-        }
-    });
-
-}
-})
 function runGame() {
+    let num1 = Math.floor(Math.random()  * 25 ) + 1;
+    let num2 = Math.floor(Math.random()  * 25 ) + 1;
+   
 
 }
+runGame();
 
 function checkAnswer() {
 
